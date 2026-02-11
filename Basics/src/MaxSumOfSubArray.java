@@ -1,26 +1,28 @@
 import java.util.Scanner;
 
-public class PrintSubarray {
-    public static void subArray(int[] newArray){
-        int ts = 0;
-        int sum =0;
+public class MaxSumOfSubArray {
+    public static void subArraySum(int[] newArray){
+        int currSum = 0;
+        int maxSum = Integer.MIN_VALUE;
+
         for (int i=0;i<newArray.length;i++){
             int start = i;
             for (int j=i;j<newArray.length;j++){
                 int end = j;
+                currSum = 0;
                 for (int k=start;k<=end;k++){
-                    System.out.print(newArray[k]+" ");
-
+                    currSum += newArray[k];
                 }
-                ts++;
-                System.out.println();
+                System.out.println(currSum);
+                if (maxSum<currSum){
+                    maxSum = currSum;
+                }
             }
-            System.out.println();
         }
-        System.out.println("Total SubArrays Are: "+ts);
+        System.out.println("Maximum Sum is: "+maxSum);  
     }
     static void main(String[] args) {
-        System.out.println("Welcome to Find SubArrays in Array");
+        System.out.println("Welcome to Find SubArrays Maximum Sum in Array");
         Scanner x= new Scanner(System.in);
         System.out.print("Enter The Size Of an Array:");
         int size  = x.nextInt();
@@ -29,7 +31,7 @@ public class PrintSubarray {
             System.out.print("Enter The Elements Of the Array "+(i+1)+" : ");
             newArray[i] = x.nextInt();
         }
-        subArray(newArray);
+        subArraySum(newArray);
 
     }
 }
