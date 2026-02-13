@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Matrix {
+class Matrix {
     public static boolean search(int[][] matrix , int key){
 
         for (int i=0;i<matrix.length;i++){

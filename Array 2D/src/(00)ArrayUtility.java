@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ArrayUtility {
+class ArrayUtility {
     public static int[][] inputArray(){
         Scanner x = new Scanner(System.in);
         System.out.print("Enter The Size Of Rows: ");
