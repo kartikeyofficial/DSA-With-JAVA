@@ -1,4 +1,4 @@
-public class OOps {
+ class OOps {
     static void main(String[] args) {
         pen p1 = new pen();
         p1.color("Blue");
