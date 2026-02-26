@@ -1,4 +1,4 @@
-public class Constructor {
+class Constructor {
      String name;
      String rollNo;
      String gender;
