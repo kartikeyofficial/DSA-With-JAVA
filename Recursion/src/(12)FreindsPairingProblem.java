@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class FreindsPairingProblem {
+class FreindsPairingProblem {
     public static int friendsPairing(int n){
 //        // Base Case
 
