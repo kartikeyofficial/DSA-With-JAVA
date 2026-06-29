@@ -1,4 +1,4 @@
-public class QuickSort {
+public class quickSorting {
     static void main(String[] args) {
         int arr[] = {6,3,8,9,1,2,7};
         quickSort(arr,0, arr.length-1);
