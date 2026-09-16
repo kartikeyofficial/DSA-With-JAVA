@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class MaxNumberInArrayList {
+class MaxNumberInArrayList {
     static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>();
         list.add(5);

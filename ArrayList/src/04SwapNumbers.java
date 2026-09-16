@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class SwapNumbers {
+class SwapNumbers {
 
     public static void swap(ArrayList<Integer> list, int indx1, int indx2){
         int temp = list.get(indx1);
