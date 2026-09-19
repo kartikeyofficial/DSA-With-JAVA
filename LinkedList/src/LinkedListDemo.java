@@ -14,7 +14,7 @@ public class LinkedListDemo {
     public static Node tail;
     static void main(String[] args) {
         LinkedListDemo l1 = new LinkedListDemo();
-        l1.head = new Node(1);
+//        l1.head = new Node(1);
 
     }
 }
