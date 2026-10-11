@@ -102,19 +102,60 @@ public class DeleteFromNthNode {
         return;
     }
 
+    public Node findMid(Node head){
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return  slow;
+    }
+    public boolean isPalindrome(){
+        // Check Base Case if in linked List have Null Or Only one node.
+        if (head == null || head.next== null){
+            return true;
+        }
+
+        // Find mid-Node
+        Node mid = findMid(head);
+
+        // Reverse the Mid after Nodes  Right Half
+
+        Node prev = null;
+        Node curr = mid;
+        Node next;
+
+        while (curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        Node right = prev;  // right Half Head
+        Node left = head;
+
+        while (right != null){
+            if (left.data != right.data){
+                return  false;
+            }
+            left = left.next;
+            right = right.next;
+        }
+        return  true;
+    }
+
     static void main(String[] args) {
         DeleteFromNthNode d1 = new DeleteFromNthNode();
-        d1.print();
         d1.addFirst(2);
+        d1.addLast(2);
+        d1.addLast(1);
+        d1.addFirst(4);
         d1.print();
-        d1.addFirst(1);
-        d1.print();
-        d1.addLast(3);
-        d1.print();
-        d1.add(1,10);
-        d1.print();
-        d1.deleteNthFromEnd(3);
-        d1.print();
+        System.out.println(d1.isPalindrome());
+
+
 
 
     }
