@@ -1,5 +1,5 @@
 public class DeleteFromNthNode {
-    public class Node{
+    public static class Node{
         public int data;
         public Node next;
 
@@ -99,7 +99,7 @@ public class DeleteFromNthNode {
             i++;
         }
         prev.next = prev.next.next;
-        return;
+
     }
 
     public Node findMid(Node head){
@@ -145,6 +145,19 @@ public class DeleteFromNthNode {
         }
         return  true;
     }
+    public static boolean isCycle(){
+        Node slow = head;
+        Node fast = head;
+
+        while (fast != null && fast.next!=null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast){
+                return true;
+            }
+        }
+        return  false;
+    }
 
     static void main(String[] args) {
         DeleteFromNthNode d1 = new DeleteFromNthNode();
@@ -154,6 +167,14 @@ public class DeleteFromNthNode {
         d1.addFirst(4);
         d1.print();
         System.out.println(d1.isPalindrome());
+
+        head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = head;
+        System.out.println(isCycle());
+
+
 
 
 
