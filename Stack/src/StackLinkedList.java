@@ -38,7 +38,7 @@ public class StackLinkedList {
             }
 
             // peak
-            public  int peak() {
+            public  int peek() {
                 if (isEmpty()) {
                     return -1;
                 }
@@ -55,7 +55,7 @@ public class StackLinkedList {
             s.push(5);
 
             while (!s.isEmpty()){
-                System.out.println(s.peak());
+                System.out.println(s.peek());
                 s.pop();
             }
         }

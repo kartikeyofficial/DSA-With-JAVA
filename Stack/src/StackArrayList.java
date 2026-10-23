@@ -19,7 +19,7 @@ public class StackArrayList {
         return top;
     }
     //peak
-    public  int peak(){
+    public  int peek(){
         if (isEmpty()){
             return -1;
         }
@@ -34,7 +34,7 @@ public class StackArrayList {
         s.push(3);
         s.push(4);
         while (!s.isEmpty()){
-            System.out.println(s.peak());
+            System.out.println(s.peek());
             s.pop();
         }
     }
