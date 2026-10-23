@@ -11,7 +11,7 @@ public class StackArrayList {
     }
     // pop
     public  int pop(){
-        if (isEmpty()== true){
+        if (isEmpty()){
             return  -1;
         }
         int top = list.get(list.size()-1);
@@ -20,14 +20,12 @@ public class StackArrayList {
     }
     //peak
     public  int peak(){
-        if (isEmpty()==true){
+        if (isEmpty()){
             return -1;
         }
         return list.get(list.size()-1);
     }
-    public void print(){
-        System.out.println(list);
-    }
+
 
     static void main(String[] args) {
         StackArrayList s = new StackArrayList();
